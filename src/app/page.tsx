@@ -172,7 +172,7 @@ export default function Home() {
         />
       ) : (
         <button className="rounded-lg p-4 bg-purple-700" onClick={() => setStarted(true)}>
-          Let's Go! ({GAME_DURATION}s)
+          Let{"'"}s Go! ({GAME_DURATION}s)
         </button>
       )}
     </main>
