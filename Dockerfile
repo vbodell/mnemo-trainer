@@ -7,7 +7,7 @@ EXPOSE ${PORT:-3000}
 FROM base as builder
 WORKDIR /app
 COPY . .
-RUN npm run build
+RUN npm install next@latest react@latest react-dom@latest && npm run build
 
 
 FROM base as production
