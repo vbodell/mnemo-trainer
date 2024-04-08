@@ -23,9 +23,18 @@ export default function Home() {
           gameDurationInSec={GAME_DURATION}
         />
       ) : (
+          <form className="flex flex-col gap-5">
+        <label> Pick a category
+            <select>
+                <option value="person">Person</option>
+                <option value="verb">Verb</option>
+                <option value="thing">Thing</option>
+            </select>
+            </label>
         <button className="rounded-lg p-4 bg-purple-700" onClick={() => setStarted(true)}>
           Let{"'"}s Go! ({GAME_DURATION}s)
         </button>
+            </form>
       )}
     </main>
   );

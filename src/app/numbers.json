@@ -1,103 +1,502 @@
 [
-    { "id": "00", "person": "Alvina" },
-    { "id": "01", "person": "Frodo" },
-    { "id": "02", "person": "Churchill" },
-    { "id": "03", "person": "Gustav L" },
-    { "id": "04", "person": "Pontus" },
-    { "id": "05", "person": "Kung David" },
-    { "id": "06", "person": "Gollum" },
-    { "id": "07", "person": "Bond" },
-    { "id": "08", "person": "Sherlock" },
-    { "id": "09", "person": "Gandalf" },
-    { "id": "10", "person": "Millimeter" },
-    { "id": "11", "person": "Billy" },
-    { "id": "12", "person": "London (Petrus)" },
-    { "id": "13", "person": "Spartacus (Paulus) " },
-    { "id": "14", "person": "Gimli" },
-    { "id": "15", "person": "Biff" },
-    { "id": "16", "person": "Qui-Gon" },
-    { "id": "17", "person": "Veronica Maggio" },
-    { "id": "18", "person": "Carl Bodell" },
-    { "id": "19", "person": "Tim Roth (1900)" },
-    { "id": "20", "person": "Roger" },
-    { "id": "21", "person": "Kevin Spacey" },
-    { "id": "22", "person": "Farfar" },
-    { "id": "23", "person": "Donkey Kong" },
-    { "id": "24", "person": "Kalle Anka" },
-    { "id": "25", "person": "Obama" },
-    { "id": "26", "person": "Michael League" },
-    { "id": "27", "person": "Superman" },
-    { "id": "28", "person": "Lisbeth Salander" },
-    { "id": "29", "person": "Roy" },
-    { "id": "30", "person": "Ante" },
-    { "id": "31", "person": "Joey" },
-    { "id": "32", "person": "Richard Page" },
-    { "id": "33", "person": "J.D." },
-    { "id": "34", "person": "Super Mario" },
-    { "id": "35", "person": "Emil i Lönneberga" },
-    { "id": "36", "person": "Einstein" },
-    { "id": "37", "person": "Tuna" },
-    { "id": "38", "person": "Yoshi" },
-    { "id": "39", "person": "Dyrsén" },
-    { "id": "40", "person": "House" },
-    { "id": "41", "person": "Kapten Jörgen" },
-    { "id": "42", "person": "Marvin (roboten)" },
-    { "id": "43", "person": "Frank Sinatra" },
-    { "id": "44", "person": "William Bodell" },
-    { "id": "45", "person": "Hitler" },
-    { "id": "46", "person": "Märta" },
-    { "id": "47", "person": "GW" },
-    { "id": "48", "person": "Maya-indian" },
-    { "id": "49", "person": "Askungen" },
-    { "id": "50", "person": "Hans Andréasson" },
-    { "id": "51", "person": "Dustin Hoffman (rainman)" },
-    { "id": "52", "person": "Forrest Gump" },
-    { "id": "53", "person": "Zlatan" },
-    { "id": "54", "person": "Legolas" },
-    { "id": "55", "person": "Doc Emmet L Brown" },
-    { "id": "56", "person": "Törnrosa" },
-    { "id": "57", "person": "Fagen" },
-    { "id": "58", "person": "Farmor Hjördis" },
-    { "id": "59", "person": "Miles Davis" },
-    { "id": "60", "person": "Mamma" },
-    { "id": "61", "person": "Sam Winchester" },
-    { "id": "62", "person": "Pappa" },
-    { "id": "63", "person": "Bobby (Supernatural)" },
-    { "id": "64", "person": "Link" },
-    { "id": "65", "person": "Abraham Lincoln" },
-    { "id": "66", "person": "Justin Timberlake" },
-    { "id": "67", "person": "Dean Winchester" },
-    { "id": "68", "person": "Erik Jonasson" },
-    { "id": "69", "person": "Austin Powers" },
-    { "id": "70", "person": "Johannes av korset" },
-    { "id": "71", "person": "Henke Lundqvist" },
-    { "id": "72", "person": "Jim Carrey" },
-    { "id": "73", "person": "Vanheden" },
-    { "id": "74", "person": "Chandler Bing" },
-    { "id": "75", "person": "Sickan" },
-    { "id": "76", "person": "Castiel" },
-    { "id": "77", "person": "Jesus" },
-    { "id": "78", "person": "John Travolta" },
-    { "id": "79", "person": "Karlsson på taket" },
-    { "id": "80", "person": "Sting" },
-    { "id": "81", "person": "Leonardo DiCaprio" },
-    { "id": "82", "person": "Barney Stinson" },
-    { "id": "83", "person": "MJ" },
-    { "id": "84", "person": "Mormor Iggy" },
-    { "id": "84", "person": "Mormor Iggy" },
-    { "id": "85", "person": "Marty McFly" },
-    { "id": "86", "person": "Elwood Blues" },
-    { "id": "87", "person": "Whitney Houston" },
-    { "id": "88", "person": "Claes Eriksson" },
-    { "id": "89", "person": "Oscar Bodell" },
-    { "id": "90", "person": "DaVinci" },
-    { "id": "91", "person": "Sofie Sundell" },
-    { "id": "92", "person": "Anders Götvall" },
-    { "id": "93", "person": "Jag" },
-    { "id": "94", "person": "Hagrid" },
-    { "id": "95", "person": "Ch" },
-    { "id": "96", "person": "Hermione" },
-    { "id": "97", "person": "Harry Potter" },
-    { "id": "98", "person": "CS Lewis" },
-    { "id": "99", "person": "David Paich" }
-  ]
+  {
+    "id": "00",
+    "person": "Alvina",
+    "verb": "spyr"
+  },
+  {
+    "id": "01",
+    "person": "Frodo",
+    "verb": "trär på ringfingret"
+  },
+  {
+    "id": "02",
+    "person": "Churchill",
+    "verb": "segertecknar"
+  },
+  {
+    "id": "03",
+    "person": "Gustav L",
+    "verb": "lyssnar på"
+  },
+  {
+    "id": "04",
+    "person": "Pontus",
+    "verb": "räknar in med"
+  },
+  {
+    "id": "05",
+    "person": "Kung David",
+    "verb": "stenslungar"
+  },
+  {
+    "id": "06",
+    "person": "Gollum",
+    "verb": "äter"
+  },
+  {
+    "id": "07",
+    "person": "Bond",
+    "verb": "dricker/smuttar"
+  },
+  {
+    "id": "08",
+    "person": "Sherlock",
+    "verb": "klär ut sig till"
+  },
+  {
+    "id": "09",
+    "person": "Gandalf",
+    "verb": "slåss mot"
+  },
+  {
+    "id": "10",
+    "person": "Millimeter",
+    "verb": "vinschar upp"
+  },
+  {
+    "id": "11",
+    "person": "Billy",
+    "verb": "tankar"
+  },
+  {
+    "id": "12",
+    "person": "London (Petrus)",
+    "verb": "förnekar"
+  },
+  {
+    "id": "13",
+    "person": "Spartacus (Paulus)",
+    "verb": "bländas av"
+  },
+  {
+    "id": "14",
+    "person": "Gimli",
+    "verb": "halshugger"
+  },
+  {
+    "id": "15",
+    "person": "Biff",
+    "verb": "bilkrockar med"
+  },
+  {
+    "id": "16",
+    "person": "Qui-Gon",
+    "verb": "bär"
+  },
+  {
+    "id": "17",
+    "person": "Veronica Maggio",
+    "verb": "flyr från"
+  },
+  {
+    "id": "18",
+    "person": "Carl Bodell",
+    "verb": "kastar i luften"
+  },
+  {
+    "id": "19",
+    "person": "Tim Roth (1900)",
+    "verb": "bor"
+  },
+  {
+    "id": "20",
+    "person": "Roger",
+    "verb": "doppar händerna i"
+  },
+  {
+    "id": "21",
+    "person": "Kevin Spacey",
+    "verb": "korträknar"
+  },
+  {
+    "id": "22",
+    "person": "Farfar",
+    "verb": "byter däck på"
+  },
+  {
+    "id": "23",
+    "person": "Donkey Kong",
+    "verb": "snubblar"
+  },
+  {
+    "id": "24",
+    "person": "Kalle Anka",
+    "verb": "dyker i"
+  },
+  {
+    "id": "25",
+    "person": "Obama",
+    "verb": "high-five:ar"
+  },
+  {
+    "id": "26",
+    "person": "Michael League",
+    "verb": ""
+  },
+  {
+    "id": "27",
+    "person": "Superman",
+    "verb": ""
+  },
+  {
+    "id": "28",
+    "person": "Lisbeth Salander",
+    "verb": ""
+  },
+  {
+    "id": "29",
+    "person": "Roy",
+    "verb": ""
+  },
+  {
+    "id": "30",
+    "person": "Ante",
+    "verb": ""
+  },
+  {
+    "id": "31",
+    "person": "Joey",
+    "verb": ""
+  },
+  {
+    "id": "32",
+    "person": "Richard Page",
+    "verb": ""
+  },
+  {
+    "id": "33",
+    "person": "J.D.",
+    "verb": ""
+  },
+  {
+    "id": "34",
+    "person": "Super Mario",
+    "verb": ""
+  },
+  {
+    "id": "35",
+    "person": "Emil i Lönneberga",
+    "verb": ""
+  },
+  {
+    "id": "36",
+    "person": "Einstein",
+    "verb": ""
+  },
+  {
+    "id": "37",
+    "person": "Tuna",
+    "verb": ""
+  },
+  {
+    "id": "38",
+    "person": "Yoshi",
+    "verb": ""
+  },
+  {
+    "id": "39",
+    "person": "Dyrsén",
+    "verb": ""
+  },
+  {
+    "id": "40",
+    "person": "House",
+    "verb": ""
+  },
+  {
+    "id": "41",
+    "person": "Kapten Jörgen",
+    "verb": ""
+  },
+  {
+    "id": "42",
+    "person": "Marvin (roboten)",
+    "verb": ""
+  },
+  {
+    "id": "43",
+    "person": "Frank Sinatra",
+    "verb": ""
+  },
+  {
+    "id": "44",
+    "person": "William Bodell",
+    "verb": ""
+  },
+  {
+    "id": "45",
+    "person": "Hitler",
+    "verb": ""
+  },
+  {
+    "id": "46",
+    "person": "Märta",
+    "verb": ""
+  },
+  {
+    "id": "47",
+    "person": "GW",
+    "verb": ""
+  },
+  {
+    "id": "48",
+    "person": "Maya-indian",
+    "verb": ""
+  },
+  {
+    "id": "49",
+    "person": "Askungen",
+    "verb": ""
+  },
+  {
+    "id": "50",
+    "person": "Hans Andréasson",
+    "verb": ""
+  },
+  {
+    "id": "51",
+    "person": "Dustin Hoffman (rainman)",
+    "verb": ""
+  },
+  {
+    "id": "52",
+    "person": "Forrest Gump",
+    "verb": ""
+  },
+  {
+    "id": "53",
+    "person": "Zlatan",
+    "verb": ""
+  },
+  {
+    "id": "54",
+    "person": "Legolas",
+    "verb": ""
+  },
+  {
+    "id": "55",
+    "person": "Doc Emmet L Brown",
+    "verb": ""
+  },
+  {
+    "id": "56",
+    "person": "Törnrosa",
+    "verb": ""
+  },
+  {
+    "id": "57",
+    "person": "Fagen",
+    "verb": ""
+  },
+  {
+    "id": "58",
+    "person": "Farmor Hjördis",
+    "verb": ""
+  },
+  {
+    "id": "59",
+    "person": "Miles Davis",
+    "verb": ""
+  },
+  {
+    "id": "60",
+    "person": "Mamma",
+    "verb": ""
+  },
+  {
+    "id": "61",
+    "person": "Sam Winchester",
+    "verb": ""
+  },
+  {
+    "id": "62",
+    "person": "Pappa",
+    "verb": ""
+  },
+  {
+    "id": "63",
+    "person": "Bobby (Supernatural)",
+    "verb": ""
+  },
+  {
+    "id": "64",
+    "person": "Link",
+    "verb": ""
+  },
+  {
+    "id": "65",
+    "person": "Abraham Lincoln",
+    "verb": ""
+  },
+  {
+    "id": "66",
+    "person": "Justin Timberlake",
+    "verb": ""
+  },
+  {
+    "id": "67",
+    "person": "Dean Winchester",
+    "verb": ""
+  },
+  {
+    "id": "68",
+    "person": "Erik Jonasson",
+    "verb": ""
+  },
+  {
+    "id": "69",
+    "person": "Austin Powers",
+    "verb": ""
+  },
+  {
+    "id": "70",
+    "person": "Johannes av korset",
+    "verb": ""
+  },
+  {
+    "id": "71",
+    "person": "Henke Lundqvist",
+    "verb": ""
+  },
+  {
+    "id": "72",
+    "person": "Jim Carrey",
+    "verb": ""
+  },
+  {
+    "id": "73",
+    "person": "Vanheden",
+    "verb": ""
+  },
+  {
+    "id": "74",
+    "person": "Chandler Bing",
+    "verb": ""
+  },
+  {
+    "id": "75",
+    "person": "Sickan",
+    "verb": ""
+  },
+  {
+    "id": "76",
+    "person": "Castiel",
+    "verb": ""
+  },
+  {
+    "id": "77",
+    "person": "Jesus",
+    "verb": ""
+  },
+  {
+    "id": "78",
+    "person": "John Travolta",
+    "verb": ""
+  },
+  {
+    "id": "79",
+    "person": "Karlsson på taket",
+    "verb": ""
+  },
+  {
+    "id": "80",
+    "person": "Sting",
+    "verb": ""
+  },
+  {
+    "id": "81",
+    "person": "Leonardo DiCaprio",
+    "verb": ""
+  },
+  {
+    "id": "82",
+    "person": "Barney Stinson",
+    "verb": ""
+  },
+  {
+    "id": "83",
+    "person": "MJ",
+    "verb": ""
+  },
+  {
+    "id": "84",
+    "person": "Mormor Iggy",
+    "verb": ""
+  },
+  {
+    "id": "85",
+    "person": "Marty McFly",
+    "verb": ""
+  },
+  {
+    "id": "86",
+    "person": "Elwood Blues",
+    "verb": ""
+  },
+  {
+    "id": "87",
+    "person": "Whitney Houston",
+    "verb": ""
+  },
+  {
+    "id": "88",
+    "person": "Claes Eriksson",
+    "verb": ""
+  },
+  {
+    "id": "89",
+    "person": "Oscar Bodell",
+    "verb": ""
+  },
+  {
+    "id": "90",
+    "person": "DaVinci",
+    "verb": ""
+  },
+  {
+    "id": "91",
+    "person": "Sofie Sundell",
+    "verb": ""
+  },
+  {
+    "id": "92",
+    "person": "Anders Götvall",
+    "verb": ""
+  },
+  {
+    "id": "93",
+    "person": "Jag",
+    "verb": ""
+  },
+  {
+    "id": "94",
+    "person": "Hagrid",
+    "verb": ""
+  },
+  {
+    "id": "95",
+    "person": "Ch",
+    "verb": ""
+  },
+  {
+    "id": "96",
+    "person": "Hermione",
+    "verb": ""
+  },
+  {
+    "id": "97",
+    "person": "Harry Potter",
+    "verb": ""
+  },
+  {
+    "id": "98",
+    "person": "CS Lewis",
+    "verb": ""
+  },
+  {
+    "id": "99",
+    "person": "David Paich",
+    "verb": ""
+  }
+]
