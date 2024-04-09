@@ -8,11 +8,14 @@ interface GameProps {
 }
 
 export interface ResponseChoice {
-  id: string;
-  text: string;
+  question: string;
+  answer: string;
 }
 
-export default function GamePresenter({ responseChoices, gameDurationInSec }: GameProps) {
+export default function GamePresenter({
+  responseChoices,
+  gameDurationInSec,
+}: GameProps) {
   const [answeredQuestions, setAnsweredQuestions] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [gameOver, setGameOver] = useState<boolean>(false);
@@ -29,12 +32,12 @@ export default function GamePresenter({ responseChoices, gameDurationInSec }: Ga
   const randomOpts = shuffledOpts.slice(0, 9);
 
   const randomIndex = Math.floor(Math.random() * randomOpts.length);
-  const question = randomOpts[randomIndex].id;
+  const question = randomOpts[randomIndex].question;
 
   function resetGame() {
-      setGameOver(false);
-      setScore(0);
-      setAnsweredQuestions(0);
+    setGameOver(false);
+    setScore(0);
+    setAnsweredQuestions(0);
   }
 
   function answerSubmitted(wasCorrect: boolean, clearAnswer: () => void) {
@@ -42,7 +45,7 @@ export default function GamePresenter({ responseChoices, gameDurationInSec }: Ga
       setAnsweredQuestions(answeredQuestions + 1);
       if (wasCorrect) setScore(score + 1);
       clearAnswer();
-    }, 500);
+    }, 200);
   }
 
   return (
@@ -51,7 +54,10 @@ export default function GamePresenter({ responseChoices, gameDurationInSec }: Ga
         {score} / {answeredQuestions}
       </p>
       {gameOver ? (
-        <button className="rounded-lg p-4 bg-purple-700" onClick={resetGame}>
+        <button
+          className="rounded-lg p-4 bg-purple-700 hover:bg-purple-600"
+          onClick={resetGame}
+        >
           Go again! ({gameDurationInSec}s)
         </button>
       ) : (

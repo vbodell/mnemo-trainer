@@ -30,22 +30,24 @@ export default function QuestionPresenter({
     return id === selectedAnswer;
   }
 
-  const choiceViews: ChoiceView[] = choices.map(({ id, text }) => ({
-    id: id,
-    disabled: hasAnswered,
-    text: text,
-    onClick: () => submitResponse(id),
-    className: classNames(
-      "rounded",
-      "p-2",
-      hasAnswered && isCorrectAnswer(id)
-        ? "bg-green-700"
-        : isSelectedAnswer(id)
-          ? "bg-red-700"
-          : "bg-purple-700",
-      !hasAnswered && "bg-purple-700",
-    ),
-  }));
+  const choiceViews: ChoiceView[] = choices.map(
+    ({ question: id, answer: text }) => ({
+      id: id,
+      disabled: hasAnswered,
+      text: text,
+      onClick: () => submitResponse(id),
+      className: classNames(
+        "rounded",
+        "p-2",
+        hasAnswered && isCorrectAnswer(id)
+          ? "bg-green-700"
+          : isSelectedAnswer(id)
+            ? "bg-red-700"
+            : "bg-purple-700",
+        !hasAnswered && "bg-purple-700",
+      ),
+    }),
+  );
   const choiceLayout = "grid grid-cols-3 grid-rows-3 gap-2";
 
   return (
