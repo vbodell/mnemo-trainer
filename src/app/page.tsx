@@ -46,6 +46,16 @@ function getResponseChoices(gameChoice: GameChoice): ResponseChoice[] {
           question: item.verb,
           answer: item.id,
         };
+      case "number2thing":
+        return {
+          question: item.id,
+          answer: item.thing,
+        };
+      case "thing2number":
+        return {
+          question: item.thing,
+          answer: item.id,
+        };
       default:
         return {
           question: item.id,

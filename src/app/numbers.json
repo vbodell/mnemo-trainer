@@ -2,501 +2,601 @@
   {
     "id": "00",
     "person": "Alvina",
-    "verb": "spyr"
+    "verb": "spyr",
+    "thing": "roder"
   },
   {
     "id": "01",
     "person": "Frodo",
-    "verb": "trär på ringfingret"
+    "verb": "trär på ringfingret",
+    "thing": "ringen"
   },
   {
     "id": "02",
     "person": "Churchill",
-    "verb": "segertecknar"
+    "verb": "segertecknar",
+    "thing": "cigarr"
   },
   {
     "id": "03",
     "person": "Gustav L",
-    "verb": "lyssnar på"
+    "verb": "lyssnar på",
+    "thing": "radio"
   },
   {
     "id": "04",
     "person": "Pontus",
-    "verb": "räknar in med"
+    "verb": "räknar in med",
+    "thing": "trumpinnar"
   },
   {
     "id": "05",
     "person": "Kung David",
-    "verb": "stenslungar"
+    "verb": "stenslungar",
+    "thing": "stenar"
   },
   {
     "id": "06",
     "person": "Gollum",
-    "verb": "äter"
+    "verb": "äter/frossar",
+    "thing": "fisk"
   },
   {
     "id": "07",
     "person": "Bond",
-    "verb": "dricker/smuttar"
+    "verb": "dricker/smuttar",
+    "thing": "martini/drink"
   },
   {
     "id": "08",
     "person": "Sherlock",
-    "verb": "klär ut sig till"
+    "verb": "klär ut sig till",
+    "thing": "soffa"
   },
   {
     "id": "09",
     "person": "Gandalf",
-    "verb": "slåss mot"
+    "verb": "slåss mot",
+    "thing": "balrog"
   },
   {
     "id": "10",
     "person": "Millimeter",
-    "verb": "vinschar upp"
+    "verb": "vinschar upp",
+    "thing": "båt-ramp"
   },
   {
     "id": "11",
     "person": "Billy",
-    "verb": "tankar"
+    "verb": "tankar",
+    "thing": "lastbil"
   },
   {
     "id": "12",
     "person": "London (Petrus)",
-    "verb": "förnekar"
+    "verb": "förnekar",
+    "thing": "tupp/höna"
   },
   {
     "id": "13",
     "person": "Spartacus (Paulus)",
-    "verb": "bländas av"
+    "verb": "bländas av",
+    "thing": "regnbåge"
   },
   {
     "id": "14",
     "person": "Gimli",
-    "verb": "halshugger"
+    "verb": "halshugger",
+    "thing": "orc(huvud)"
   },
   {
     "id": "15",
     "person": "Biff",
-    "verb": "bilkrockar med"
+    "verb": "bilkrockar med",
+    "thing": "gödselbil"
   },
   {
     "id": "16",
     "person": "Qui-Gon",
-    "verb": "bär"
+    "verb": "bär",
+    "thing": "lasersvärd"
   },
   {
     "id": "17",
     "person": "Veronica Maggio",
-    "verb": "flyr från"
+    "verb": "flyr från",
+    "thing": "förkläde"
   },
   {
     "id": "18",
     "person": "Carl Bodell",
-    "verb": "kastar i luften"
+    "verb": "kastar i luften",
+    "thing": "studentmössa"
   },
   {
     "id": "19",
     "person": "Tim Roth (1900)",
-    "verb": "bor"
+    "verb": "bor",
+    "thing": "fartyg/stor båt"
   },
   {
     "id": "20",
     "person": "Roger",
-    "verb": "doppar händerna i"
+    "verb": "doppar händerna i",
+    "thing": "olja/oljehink"
   },
   {
     "id": "21",
     "person": "Kevin Spacey",
-    "verb": "korträknar"
+    "verb": "korträknar",
+    "thing": "kortlek"
   },
   {
     "id": "22",
     "person": "Farfar",
-    "verb": "byter däck på"
+    "verb": "byter däck på",
+    "thing": "MLW"
   },
   {
     "id": "23",
     "person": "Donkey Kong",
-    "verb": "snubblar"
+    "verb": "snubblar",
+    "thing": "bananskal"
   },
   {
     "id": "24",
     "person": "Kalle Anka",
-    "verb": "dyker i"
+    "verb": "dyker i",
+    "thing": "badkar"
   },
   {
     "id": "25",
     "person": "Obama",
-    "verb": "high-five:ar"
+    "verb": "high-five:ar",
+    "thing": "stor hockeyhand"
   },
   {
     "id": "26",
     "person": "Michael League",
-    "verb": ""
+    "verb": "basspelar",
+    "thing": "effektpedaler/elbas"
   },
   {
     "id": "27",
     "person": "Superman",
-    "verb": ""
+    "verb": "flyger",
+    "thing": "mantel/käp"
   },
   {
     "id": "28",
     "person": "Lisbeth Salander",
-    "verb": ""
+    "verb": "kodar",
+    "thing": "dator/tangentbord"
   },
   {
     "id": "29",
     "person": "Roy",
-    "verb": ""
+    "verb": "vinkelslipar/cirkelsågar",
+    "thing": "utombordare"
   },
   {
     "id": "30",
     "person": "Ante",
-    "verb": ""
+    "verb": "segwayar",
+    "thing": "segway"
   },
   {
     "id": "31",
     "person": "Joey",
-    "verb": ""
+    "verb": "hinkar i sig",
+    "thing": "gallon med mjölk"
   },
   {
     "id": "32",
     "person": "Richard Page",
-    "verb": ""
+    "verb": "gråter",
+    "thing": "julgran"
   },
   {
     "id": "33",
     "person": "J.D.",
-    "verb": ""
+    "verb": "läser",
+    "thing": "läkarjournal"
   },
   {
     "id": "34",
     "person": "Super Mario",
-    "verb": ""
+    "verb": "hoppar",
+    "thing": "flugsvamp"
   },
   {
     "id": "35",
     "person": "Emil i Lönneberga",
-    "verb": ""
+    "verb": "täljer",
+    "thing": "trägubbar"
   },
   {
     "id": "36",
     "person": "Einstein",
-    "verb": ""
+    "verb": "undervisar/pekpinnar",
+    "thing": "svarta tavlan (pekpinne?)"
   },
   {
     "id": "37",
     "person": "Tuna",
-    "verb": ""
+    "verb": "steker",
+    "thing": "bacon/stekpanna"
   },
   {
     "id": "38",
     "person": "Yoshi",
-    "verb": ""
+    "verb": "räcker ut tungan",
+    "thing": "lång tunga"
   },
   {
     "id": "39",
     "person": "Dyrsén",
-    "verb": ""
+    "verb": "diskar/disktorkar",
+    "thing": "disk/tallrik"
   },
   {
     "id": "40",
     "person": "House",
-    "verb": ""
+    "verb": "poppar upp/pilleröppnar",
+    "thing": "pillerburk/vicodin"
   },
   {
     "id": "41",
     "person": "Kapten Jörgen",
-    "verb": ""
+    "verb": "gormar/är full ombord",
+    "thing": "TS Gunilla/segelbåt"
   },
   {
     "id": "42",
     "person": "Marvin (roboten)",
-    "verb": ""
+    "verb": "frågar om livets mening",
+    "thing": "dörr"
   },
   {
     "id": "43",
     "person": "Frank Sinatra",
-    "verb": ""
+    "verb": "sjunger",
+    "thing": "grammofon/vinylspelare"
   },
   {
     "id": "44",
     "person": "William Bodell",
-    "verb": ""
+    "verb": "trimmar/röjsågar",
+    "thing": "trimmer/röjsåg"
   },
   {
     "id": "45",
     "person": "Hitler",
-    "verb": ""
+    "verb": "hänger sig med",
+    "thing": "snara/truckers hitch"
   },
   {
     "id": "46",
     "person": "Märta",
-    "verb": ""
+    "verb": "mjölkar",
+    "thing": "kossa"
   },
   {
     "id": "47",
     "person": "GW",
-    "verb": ""
+    "verb": "placerar i pannan",
+    "thing": "glasögon"
   },
   {
     "id": "48",
     "person": "Maya-indian",
-    "verb": ""
+    "verb": "sår/utsäde",
+    "thing": "säd/säck"
   },
   {
     "id": "49",
     "person": "Askungen",
-    "verb": ""
+    "verb": "syr",
+    "thing": "klänning"
   },
   {
     "id": "50",
     "person": "Hans Andréasson",
-    "verb": ""
+    "verb": "telefonpratar/-svarar",
+    "thing": "telefon/mobil"
   },
   {
     "id": "51",
     "person": "Dustin Hoffman (rainman)",
-    "verb": ""
+    "verb": "räknar",
+    "thing": "tändstickor"
   },
   {
     "id": "52",
     "person": "Forrest Gump",
-    "verb": ""
+    "verb": "gräsklipper",
+    "thing": "gräsklippare"
   },
   {
     "id": "53",
     "person": "Zlatan",
-    "verb": ""
+    "verb": "sparkar",
+    "thing": "fotboll"
   },
   {
     "id": "54",
     "person": "Legolas",
-    "verb": ""
+    "verb": "slänger sig upp på",
+    "thing": "häst"
   },
   {
     "id": "55",
     "person": "Doc Emmet L Brown",
-    "verb": ""
+    "verb": "utbrister/galen min",
+    "thing": "brinnande papperskorg"
   },
   {
     "id": "56",
     "person": "Törnrosa",
-    "verb": ""
+    "verb": "sticker sig på",
+    "thing": "spinnrock"
   },
   {
     "id": "57",
     "person": "Fagen",
-    "verb": ""
+    "verb": "mixar vid",
+    "thing": "mixerbord"
   },
   {
     "id": "58",
     "person": "Farmor Hjördis",
-    "verb": ""
+    "verb": "micrar",
+    "thing": "kaffekopp"
   },
   {
     "id": "59",
     "person": "Miles Davis",
-    "verb": ""
+    "verb": "drar en lina",
+    "thing": "knark/kokain"
   },
   {
     "id": "60",
     "person": "Mamma",
-    "verb": ""
+    "verb": "schasar",
+    "thing": "katt"
   },
   {
     "id": "61",
     "person": "Sam Winchester",
-    "verb": ""
+    "verb": "laddar om (barrel)",
+    "thing": "hagelgevär/shotgun"
   },
   {
     "id": "62",
     "person": "Pappa",
-    "verb": ""
+    "verb": "vattenskidåker",
+    "thing": "vattenskida/-or"
   },
   {
     "id": "63",
     "person": "Bobby (Supernatural)",
-    "verb": ""
+    "verb": "gräver",
+    "thing": "spade"
   },
   {
     "id": "64",
     "person": "Link",
-    "verb": ""
+    "verb": "pilbågsskjuter",
+    "thing": "pilbåge"
   },
   {
     "id": "65",
     "person": "Abraham Lincoln",
-    "verb": ""
+    "verb": "blir skjuten",
+    "thing": "pistol"
   },
   {
     "id": "66",
     "person": "Justin Timberlake",
-    "verb": ""
+    "verb": "trampar sönder",
+    "thing": "discokula"
   },
   {
     "id": "67",
     "person": "Dean Winchester",
-    "verb": ""
+    "verb": "cruisar/slirar",
+    "thing": "chevrolet impala"
   },
   {
     "id": "68",
     "person": "Erik Jonasson",
-    "verb": ""
+    "verb": "skateboardar/gör ollie",
+    "thing": "skateboard"
   },
   {
     "id": "69",
     "person": "Austin Powers",
-    "verb": ""
+    "verb": "sätter i halsen",
+    "thing": "schakpjäs"
   },
   {
     "id": "70",
-    "person": "Johannes av korset",
-    "verb": ""
+    "person": "Tuschen/Johannes av korset",
+    "verb": "ser",
+    "thing": "kors"
   },
   {
     "id": "71",
     "person": "Henke Lundqvist",
-    "verb": ""
+    "verb": "plockhandskfångar",
+    "thing": "puck"
   },
   {
     "id": "72",
     "person": "Jim Carrey",
-    "verb": ""
+    "verb": "drar in med lasso",
+    "thing": "månen"
   },
   {
     "id": "73",
     "person": "Vanheden",
-    "verb": ""
+    "verb": "rycker till kostymärmen",
+    "thing": "tweedkavaj"
   },
   {
     "id": "74",
     "person": "Chandler Bing",
-    "verb": ""
+    "verb": "dansar ovanpå",
+    "thing": "bord"
   },
   {
     "id": "75",
     "person": "Sickan",
-    "verb": ""
+    "verb": "smeker/klappar",
+    "thing": "svart lacksko"
   },
   {
     "id": "76",
     "person": "Castiel",
-    "verb": ""
+    "verb": "letar",
+    "thing": "trenchcoat"
   },
   {
     "id": "77",
     "person": "Jesus",
-    "verb": ""
+    "verb": "går på",
+    "thing": "vatten"
   },
   {
     "id": "78",
     "person": "John Travolta",
-    "verb": ""
+    "verb": "kammar håret",
+    "thing": "kam"
   },
   {
     "id": "79",
     "person": "Karlsson på taket",
-    "verb": ""
+    "verb": "eldar",
+    "thing": "ångmaskin"
   },
   {
     "id": "80",
     "person": "Sting",
-    "verb": ""
+    "verb": "spatserar",
+    "thing": "käpp"
   },
   {
     "id": "81",
     "person": "Leonardo DiCaprio",
-    "verb": ""
+    "verb": "lägger huvudet på",
+    "thing": "tågräls"
   },
   {
     "id": "82",
     "person": "Barney Stinson",
-    "verb": ""
+    "verb": "flörtar med",
+    "thing": "anonyma flickor..."
   },
   {
     "id": "83",
     "person": "MJ",
-    "verb": ""
+    "verb": "moonwalkar",
+    "thing": "vit glitterhandske"
   },
   {
     "id": "84",
     "person": "Mormor Iggy",
-    "verb": ""
+    "verb": "plockar",
+    "thing": "bärkorg"
   },
   {
     "id": "85",
     "person": "Marty McFly",
-    "verb": ""
+    "verb": "tidsreser",
+    "thing": "DeLorean"
   },
   {
     "id": "86",
     "person": "Elwood Blues",
-    "verb": ""
+    "verb": "slumrar/sover",
+    "thing": "Tåg"
   },
   {
     "id": "87",
     "person": "Whitney Houston",
-    "verb": ""
+    "verb": "sjunger",
+    "thing": "microfon"
   },
   {
     "id": "88",
     "person": "Claes Eriksson",
-    "verb": ""
+    "verb": "dränker sig med",
+    "thing": "stenbumling"
   },
   {
     "id": "89",
     "person": "Oscar Bodell",
-    "verb": ""
+    "verb": "löder",
+    "thing": "lödpenna"
   },
   {
     "id": "90",
     "person": "DaVinci",
-    "verb": ""
+    "verb": "målar",
+    "thing": "Vitruvian Man"
   },
   {
     "id": "91",
     "person": "Sofie Sundell",
-    "verb": ""
+    "verb": "käkar/nöjesäter",
+    "thing": "popcorn(skål)"
   },
   {
     "id": "92",
     "person": "Anders Götvall",
-    "verb": ""
+    "verb": "snickrar",
+    "thing": "ljustross"
   },
   {
     "id": "93",
     "person": "Jag",
-    "verb": ""
+    "verb": "pianospelar",
+    "thing": "piano"
   },
   {
     "id": "94",
     "person": "Hagrid",
-    "verb": ""
+    "verb": "sitter",
+    "thing": "stol"
   },
   {
     "id": "95",
     "person": "Ch",
-    "verb": ""
+    "verb": "cello-/stråkspelar",
+    "thing": "cello"
   },
   {
     "id": "96",
     "person": "Hermione",
-    "verb": ""
+    "verb": "borstar tänderna",
+    "thing": "tandborste"
   },
   {
     "id": "97",
     "person": "Harry Potter",
-    "verb": ""
+    "verb": "trollar/viftar",
+    "thing": "trollstav"
   },
   {
     "id": "98",
     "person": "CS Lewis",
-    "verb": ""
+    "verb": "dammar av",
+    "thing": "garderob"
   },
   {
     "id": "99",
     "person": "David Paich",
-    "verb": ""
+    "verb": "klädprovar",
+    "thing": "top hat"
   }
 ]
