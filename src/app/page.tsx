@@ -3,9 +3,10 @@
 import { useState } from "react";
 
 import numbers from "../data/numbers.json";
+import texts from "../data/texts.json";
 import { ResponseChoice } from "./Presenters/Game";
 import GamePresenter from "./Presenters/Game";
-import ReactDiffViewer from "react-diff-viewer-continued";
+import ReactDiffViewer, { DiffMethod } from "react-diff-viewer-continued";
 
 type GameChoice =
   | "number2person"
@@ -73,8 +74,12 @@ export default function Home() {
   const [started, setStarted] = useState<boolean>(false);
   const GAME_DURATION = 60;
 
-  const oldCode = "In a hole in the ground there lived a hobbit";
-  const [newCode, setNewCode] = useState<string>("");
+  // TODO
+  console.log(texts);
+  const titles = texts.map(({ title }) => title);
+  const [textTitle, setTextTitle] = useState<string>(titles[0]);
+  const baseText = texts.filter((text) => text.title === textTitle)[0].text;
+  const [inputText, setNewCode] = useState<string>("");
 
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
@@ -99,9 +104,9 @@ export default function Home() {
         //   gameDurationInSec={GAME_DURATION}
         // />
         <ReactDiffViewer
-          oldValue={oldCode}
-          newValue={newCode}
-          splitView={true}
+          oldValue={baseText}
+          newValue={inputText}
+          compareMethod={DiffMethod.WORDS}
         />
       ) : (
         // <form className="flex flex-col gap-5">
@@ -127,6 +132,21 @@ export default function Home() {
         //     Let{"'"}s Go! ({GAME_DURATION}s)
         //   </button>
         <form method="post" onSubmit={handleSubmit}>
+          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            Pick a title
+            <select
+              name="intitle"
+              value={textTitle}
+              onChange={(e) => setTextTitle(e.target.value.toString())}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              {titles.map((title) => (
+                <option key={title} value={title}>
+                  {title}
+                </option>
+              ))}
+            </select>
+          </label>
           <textarea name="input" />
           <button>Submit</button>
         </form>
