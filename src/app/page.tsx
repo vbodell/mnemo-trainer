@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import numbers from "./numbers.json";
+import numbers from "../data/numbers.json";
 import { ResponseChoice } from "./Presenters/Game";
 import GamePresenter from "./Presenters/Game";
 
