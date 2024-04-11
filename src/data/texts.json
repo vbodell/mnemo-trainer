@@ -1,0 +1,113 @@
+[
+  {
+    "title": "The Shadow",
+    "tags": ["tolkien"],
+    "text": "The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end the Shadow was only a small and passing thing: there was light and high beauty for ever beyond its reach."
+  },
+  {
+    "title": "Eomer's lament",
+    "tags": ["tolkien", "poetry"],
+    "text": "Out of doubt, out of dark, to the day’s rising
+    I came singing in the sun, sword unsheathing.
+    To hope’s end I rode and to heart’s breaking:
+    Now for wrath, now for ruin and a red nightfall"
+  },
+  {
+    "title": "Gandalf on Aragorn"
+    "tags": ["tolkien"],
+    "text": "He is strong and stern underneath, Pippin; bold, determined, able to take his own counsel and dare great risks at need",
+  },
+  {
+    "title": "Until they (hobbits) came to think that",
+    "tags": ["tolkien"],
+    "text": "peace and plenty were the rule in Middle-earth and the right of all sensible folk"
+  },
+  {
+    "title": "The road goes ever on and on",
+    "tags": ["tolkien", "poetry"],
+    "text": "The Road goes ever on and on,
+    Down from the door where it began.
+    Now far ahead the Road has gone,
+    And I must follow, if I can,
+    Pursuing it with eager feet,
+    Until it joins some larger way
+    Where many paths and errands meet.
+    And whither then? I cannot say."
+  },
+  {
+    "title": "All that is Gold",
+    "tags": ["tolkien", "poetry"],
+    "text": "All that is gold does not glitter,
+    Not all those who wander are lost;
+    The old that is strong does not wither,
+    Deep roots are not reached by the frost.
+    From the ashes a fire shall be woken,
+    A light from the shadows shall spring;
+    Renewed shall be blade that was broken,
+    The crownless again shall be king."
+  },
+  {
+    "title": "Gettysburg Adress",
+    "tags": ["works", "lincoln"],
+    "text": "Four score and seven years ago our fathers brought forth, upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+
+    Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived, and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives, that that nation might live. It is altogether fitting and proper that we should do this.
+
+    But, in a larger sense, we can not dedicate, we can not consecrate - we can not hallow - this ground. The brave men, living and dead, who struggled here, have consecrated it far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here, have, thus far, so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us - that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion - that we here highly resolve that these dead shall not have died in vain - that this nation, under God, shall have a new birth of freedom - and that government of the people, by the people, for the people, shall not perish from the earth."
+  },
+  {
+    "title": "Ja visst gör det ont",
+    "tags": ["poetry"],
+    "text": "Ja visst gör det ont när knoppar brister.
+    Varför skulle annars våren tveka?
+    Varför skulle all vår heta längtan  
+    bindas i det frusna bitterbleka?
+    Höljet var ju knoppen hela vintern.
+    Vad är det för nytt, som tär och spränger?
+    Ja visst gör det ont när knoppar brister,
+    ont för det som växer
+    och det som stänger.
+
+    Ja nog är det svårt när droppar faller.
+    Skälvande av ängslan tungt de hänger,
+    klamrar sig vid kvisten, sväller, glider  -
+    tyngden drar dem neråt, hur de klänger.
+    Svårt att vara oviss, rädd och delad,
+    svårt att känna djupet dra och kalla,
+    ändå sitta kvar och bara darra  -
+    svårt att vilja stanna
+    och vilja falla.
+
+    Då, när det är värst och inget hjälper,
+    Brister som i jubel trädets knoppar.
+    Då, när ingen rädsla längre håller,
+    faller i ett glitter kvistens droppar
+    glömmer att de skrämdes av det nya
+    glömmer att de ängslades för färden  -
+    känner en sekund sin största trygghet,
+    vilar i den tillit
+    som skapar världen.
+    "
+  },
+  {
+    "title": "Psalm 1",
+    "tags": ["psalm"],
+    "text": "Lycklig den som inte följer de gudlösa,
+    inte går syndares väg
+    eller sitter bland hädare
+    utan har sin lust i Herrens lag
+    och läser den dag och natt.
+    Han är som ett träd
+    planterat nära vatten —
+    det bär sin frukt i rätt tid,
+    aldrig vissnar bladen.
+    Allt vad han gör går väl.
+    Inte så med de gudlösa —
+    de liknar agnar som vinden för bort.
+    Därför döms de gudlösa där rätten råder
+    och syndarna i de rättfärdigas krets.
+    Herren är med på de rättfärdigas väg,
+    men de gudlösas väg leder till intet."
+  }
+],
+
