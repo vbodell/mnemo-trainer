@@ -26,6 +26,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer components {
+  .btn-primary {
+    @apply rounded-lg p-4 bg-purple-700;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
