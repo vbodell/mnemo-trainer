@@ -10,8 +10,8 @@ export default function Home() {
 
   let tags = texts.map(({ tags }) => tags).flat();
   tags = Array.from(new Set(tags));
-  tags.unshift("All"); // magic value
-  const [activeTag, setActiveTag] = useState<string>("All");
+  tags.unshift("All"); // All categories magic value
+  const [activeTag, setActiveTag] = useState<string>(tags[0]);
 
   const titles = texts
     .filter(({ tags }) => activeTag === "All" || tags.includes(activeTag))
@@ -49,13 +49,15 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-16 lg:p-24">
       {started ? (
         <>
           <ReactDiffViewer
             oldValue={cleanBaseText}
             newValue={inputText}
             compareMethod={DiffMethod.WORDS}
+            leftTitle="Original"
+            rightTitle="Submitted"
           />
           <button onClick={() => setStarted(false)} className="btn-primary">
             Reset
@@ -63,7 +65,7 @@ export default function Home() {
         </>
       ) : (
         <form
-          className="flex flex-col gap-6 w-1/2"
+          className="flex flex-col gap-6 w-full md:w-2/3 lg:w-1/2"
           method="post"
           onSubmit={handleSubmit}
         >

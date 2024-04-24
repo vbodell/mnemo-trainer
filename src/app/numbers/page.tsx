@@ -74,7 +74,7 @@ export default function Home() {
 
   // TODO: For - labels
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-16 lg:p-24">
       {started ? (
         <GamePresenter
           responseChoices={responseChoices}
