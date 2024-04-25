@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link'
 
 export default function Home() {
   const nav = [
@@ -12,9 +13,9 @@ export default function Home() {
       <h1>Pick a game</h1>
       <div className="grid grid-rows-4 w-3/4 sm:w-1/2 lg:grid-rows-1 lg:grid-cols-4 gap-4 text-center">
         {nav.map(([title, url]) => (
-          <a key={url} href={url} className="btn-primary">
+          <Link key={url} href={url} className="btn-primary">
             {title}
-          </a>
+          </Link>
         ))}
       </div>
     </main>
