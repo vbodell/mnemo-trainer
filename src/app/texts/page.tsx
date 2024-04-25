@@ -22,6 +22,15 @@ export default function Home() {
   const baseText = texts.find((text) => text.title === textTitle)?.text;
   const cleanBaseText = cleanText(baseText);
   const [inputText, setInputText] = useState<string>("");
+  
+  function updateSelectedTag(tag: string) {
+    const titles = texts
+      .filter(({ tags }) => tag === "All" || tags.includes(tag))
+      .map(({ title }) => title)
+      .sort();
+    setActiveTag(tag);
+    setTextTitle(titles[0]);
+  }
 
   function cleanText(text: string | undefined): string {
     if (typeof text === "undefined") return "";
@@ -74,7 +83,7 @@ export default function Home() {
             <select
               name="tag"
               value={activeTag}
-              onChange={(e) => setActiveTag(e.target.value.toString())}
+              onChange={(e) => updateSelectedTag(e.target.value.toString())}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
               {tags.map((tag) => (
