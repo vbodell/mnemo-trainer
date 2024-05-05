@@ -42,6 +42,7 @@ export default function Home() {
     );
     cleaned = cleaned.replaceAll("\n", " ");
     cleaned = cleaned.replaceAll(" - ", " ");
+    cleaned = cleaned.replaceAll(" — ", " ");
     return cleaned;
   }
 

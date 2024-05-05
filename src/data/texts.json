@@ -10,8 +10,13 @@
     "text": "Out of doubt, out of dark, to the day’s rising I came singing in the sun, sword unsheathing. To hope’s end I rode and to heart’s breaking: Now for wrath, now for ruin and a red nightfall"
   },
   {
+    "title": "Saruman: House of Eorl",
+    "tags": ["tolkien", "quote"],
+    "text": "What is the house of Eorl but a thatched barn where brigands drink in the reek, and their brats roll on the floor among the dogs?"
+  },
+  {
     "title": "Gandalf on Aragorn",
-    "tags": ["tolkien"],
+    "tags": ["tolkien", "quote"],
     "text": "He is strong and stern underneath, Pippin; bold, determined, able to take his own counsel and dare great risks at need"
   },
   {
@@ -33,6 +38,71 @@
     "title": "Gettysburg Adress",
     "tags": ["works", "lincoln"],
     "text": "Four score and seven years ago our fathers brought forth, upon this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived, and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives, that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate, we can not consecrate - we can not hallow - this ground. The brave men, living and dead, who struggled here, have consecrated it far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here, have, thus far, so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us - that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion - that we here highly resolve that these dead shall not have died in vain - that this nation, under God, shall have a new birth of freedom - and that government of the people, by the people, for the people, shall not perish from the earth."
+  },
+  {
+    "title": "Med hur lite vett världen styrs",
+    "tags": ["Oxenstierna", "quote"],
+    "text": "an necsis, mi fili, quantilla prudentia mundus regatur"
+  },
+  {
+    "title": "Rediscovering purpose",
+    "tags": ["TS Elliot", "quote"],
+    "text": "We shall not cease from exploration And the end of all our exploring Will be to arrive where we started And know the place for the first time."
+  },
+  {
+    "title": "on leadership",
+    "tags": ["stephen covey", "quote"],
+    "text": "leadership is communicating to people their worth and potential so clearly that they come to see it in themselves."
+  },
+  {
+    "title": "The marvelous predicament",
+    "tags": ["Fred Brooks", "quote"],
+    "text": "What a marvelous predicament! Not only is the end not in sight, the pace is not slackening. We have many future joys."
+  },
+  {
+    "title": "Because the medium is tractable",
+    "tags": ["Fred Brooks", "quote"],
+    "text": "Because the medium is tractable, we expect few difficulties in implementation; hence our pervasive optimism. Because our ideas are faulty, we have bugs; hence our optimism is unjustified"
+  },
+  {
+    "title": "Designing grand concepts",
+    "tags": ["Fred Brooks", "quote"],
+    "text": "Designing grand concepts is fun; finding nitty little bugs is just work. With any creative activity come dreary hours of tedious, painstaking labor, and programming is no exception."
+  },
+  {
+    "title": "Magic of myth and legend",
+    "tags": ["Fred Brooks", "quote"],
+    "text": "The magic of myth and legend has come true in our time. One types the correct incantation on a keyboard, and a display screen comes to life, showing things that never were nor could be. Programming then is fun because it gratifies creative longings built deep within us and delights sensibilities we have in common with all men"
+  },
+  {
+    "title": "Castles in the air",
+    "tags": ["Fred Brooks", "quote"],
+    "text": "He builds his castle in the air, from air, creating by exertion of the imagination"
+  },
+  {
+    "title": "The heart dies a slow death",
+    "tags": ["Memoirs of a geisha", "quote"],
+    "text": "The heart dies a slow death, shedding each hope like leaves until one day there are none. No hopes. Nothing remains."
+  },
+  {
+    "title": "The heart dies a slow death",
+    "tags": ["Memoirs of a geisha", "quote"],
+    "text": "The heart dies a slow death, shedding each hope like leaves until one day there are none. No hopes. Nothing remains."
+  },
+  {
+    "title": "We must not expect happiness",
+    "tags": ["Memoirs of a geisha", "quote"],
+    "text": "We must not expect happyness, Sayuri. It is not something we deserve. When life goes well it is a sudden gift; it cannot last forever."
+  },
+  {
+    "title": "You can",
+    "tags": ["lincoln"],
+    "text": "You can have anything you want if you want it badly enough. You can be anything you want to be, do anything you set out to accomplish if you hold to that desire with singleness of purpose."
+  },
+  {
+    "title": "C-dur",
+    "tags": ["poetry", "tranströmmer"],
+    "text": "När han kom ner på gatan efter kärleksmötet virvlade snö i luften. Vintern hade kommit medan de låg hos varann. Natten lyste vit. Han gick fort av glädje. Hela staden sluttade. Förbipasserande leenden – alla log bakom uppfällda kragar. Det var fritt! Och alla frågetecken började sjunga om Guds tillvaro. Så tyckte han. En musik gjorde sig lös och gick i yrande snö med långa steg. Allting var på vandring mot ton C. En darrande kompass riktad mot C. En timme ovanför plågorna. Det var lätt! Alla log bakom uppfällda kragar."
   },
   {
     "title": "Ja visst gör det ont",
