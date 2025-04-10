@@ -10,25 +10,34 @@ export default function Lists() {
 
   console.log(lists)
   const titles = lists.map(({title}) => title).sort();
-  const [textTitle, setTextTitle] = useState<string>(titles[0]);
+  const [listTitle, setListTitle] = useState<string>(titles[0]);
 
-  const placeholder = lists.find((l) => l.title === textTitle)?.placeholder;
-  // TODO: Parse list into text
-  // const baseText = lists.find((text) => text.title === textTitle)?.text;
-  // const cleanBaseText = cleanText(baseText);
+  const listKey = lists.find((l) => l.title === listTitle)?.key;
+  const placeholder = lists.find((l) => l.title === listTitle)?.placeholder;
+  const entries = lists.find((l) => l.title === listTitle)?.entries;
+
+  const cleanBaseText = mapEntriesToText(listKey, entries);
   const [inputText, setInputText] = useState<string>("");
+
+  function mapEntriesToText(listTitle: string, entries: any[]) {
+    const rulers = ["presidents", "primes", "kings"];
+    const isRulerList = rulers.includes(listKey);
+    return isRulerList ? mapRulersToText(entries) : mapCountriesToText(entries);
+  }
+
+  function mapRulersToText(rulers: any[]): string {
+    const rows = rulers.map(e => `${e.name},${e.began_rule}`);
+    return rows.join('\n').toLowerCase();
+  }
+  
+  function mapCountriesToText(countries: any[]): string {
+    const rows = countries.map(e => `${e.country},${e.population}`);
+    return rows.join('\n').toLowerCase();
+  }
   
   function cleanText(text: string | undefined): string {
     if (typeof text === "undefined") return "";
-    const replaceChars = ";:,.?".split("");
-    let cleaned = text.trim().toLowerCase();
-    cleaned = replaceChars.reduce(
-      (replaced, char) => replaced.replaceAll(char, ""),
-      cleaned,
-    );
-    cleaned = cleaned.replaceAll("\n", " ");
-    cleaned = cleaned.replaceAll(" - ", " ");
-    cleaned = cleaned.replaceAll(" — ", " ");
+    let cleaned = text.toLowerCase();
     return cleaned;
   }
 
@@ -69,8 +78,8 @@ export default function Lists() {
             Pick a list
             <select
               name="intitle"
-              value={textTitle}
-              onChange={(e) => setTextTitle(e.target.value.toString())}
+              value={listTitle}
+              onChange={(e) => setListTitle(e.target.value.toString())}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
               {titles.map((title) => (
