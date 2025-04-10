@@ -65,7 +65,7 @@ function getResponseChoices(gameChoice: GameChoice): ResponseChoice[] {
   });
 }
 
-export default function Home() {
+export default function Numbers() {
   const [gameChoice, setGameChoice] = useState<GameChoice>("number2person");
   const responseChoices = getResponseChoices(gameChoice);
 

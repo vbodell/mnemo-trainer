@@ -2,36 +2,22 @@
 
 import { useState } from "react";
 
-import texts from "../../data/texts.json";
+import lists from "../../data/lists.json";
 import ReactDiffViewer, { DiffMethod } from "react-diff-viewer-continued";
 
-export default function Texts() {
+export default function Lists() {
   const [started, setStarted] = useState<boolean>(false);
 
-  let tags = texts.map(({ tags }) => tags).flat();
-  tags = Array.from(new Set(tags));
-  tags.unshift("All"); // All categories magic value
-  const [activeTag, setActiveTag] = useState<string>(tags[0]);
-
-  const titles = texts
-    .filter(({ tags }) => activeTag === "All" || tags.includes(activeTag))
-    .map(({ title }) => title)
-    .sort();
+  console.log(lists)
+  const titles = lists.map(({title}) => title).sort();
   const [textTitle, setTextTitle] = useState<string>(titles[0]);
 
-  const baseText = texts.find((text) => text.title === textTitle)?.text;
-  const cleanBaseText = cleanText(baseText);
+  const placeholder = lists.find((l) => l.title === textTitle)?.placeholder;
+  // TODO: Parse list into text
+  // const baseText = lists.find((text) => text.title === textTitle)?.text;
+  // const cleanBaseText = cleanText(baseText);
   const [inputText, setInputText] = useState<string>("");
   
-  function updateSelectedTag(tag: string) {
-    const titles = texts
-      .filter(({ tags }) => tag === "All" || tags.includes(tag))
-      .map(({ title }) => title)
-      .sort();
-    setActiveTag(tag);
-    setTextTitle(titles[0]);
-  }
-
   function cleanText(text: string | undefined): string {
     if (typeof text === "undefined") return "";
     const replaceChars = ";:,.?".split("");
@@ -80,22 +66,7 @@ export default function Texts() {
           onSubmit={handleSubmit}
         >
           <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-            Select a category
-            <select
-              name="tag"
-              value={activeTag}
-              onChange={(e) => updateSelectedTag(e.target.value.toString())}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            >
-              {tags.map((tag) => (
-                <option key={tag} value={tag}>
-                  {tag}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-            Pick a title
+            Pick a list
             <select
               name="intitle"
               value={textTitle}
@@ -110,12 +81,12 @@ export default function Texts() {
             </select>
           </label>
           <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-            Write as much as you can remember:
+            Write the list with values separated by comma and entries by newline.
             <textarea
               rows={8}
               name="input"
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder={`${textTitle}...`}
+              placeholder={`${placeholder}...`}
             ></textarea>
           </label>
           <button className="btn-primary">Submit</button>
