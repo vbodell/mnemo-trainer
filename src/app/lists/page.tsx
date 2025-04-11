@@ -8,13 +8,12 @@ import ReactDiffViewer, { DiffMethod } from "react-diff-viewer-continued";
 export default function Lists() {
   const [started, setStarted] = useState<boolean>(false);
 
-  console.log(lists)
   const titles = lists.map(({title}) => title).sort();
   const [listTitle, setListTitle] = useState<string>(titles[0]);
 
-  const listKey = lists.find((l) => l.title === listTitle)?.key;
-  const placeholder = lists.find((l) => l.title === listTitle)?.placeholder;
-  const entries = lists.find((l) => l.title === listTitle)?.entries;
+  const listKey = lists.find((l) => l.title === listTitle)?.key ?? "";
+  const placeholder = lists.find((l) => l.title === listTitle)?.placeholder ?? "";
+  const entries = lists.find((l) => l.title === listTitle)?.entries ?? [];
 
   const cleanBaseText = mapEntriesToText(listKey, entries);
   const [inputText, setInputText] = useState<string>("");
