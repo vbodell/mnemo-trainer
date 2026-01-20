@@ -4,6 +4,7 @@ import Link from 'next/link';
 export default function Practice() {
   const games = [
     ["Deck of Cards", "/practice/deck-of-cards"],
+    ["Pi Digits", "/practice/pi-digits"],
   ];
 
   return (
