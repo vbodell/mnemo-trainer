@@ -256,7 +256,7 @@ function PiDigitsGame() {
     return clean.match(/.{1,6}/g)?.join("\n") || "";
   };
 
-  const expectedText = formatForDiff(PI_DIGITS);
+  const expectedText = formatForDiff(PI_DIGITS.slice(0, (chunkIndex + 1) * 6));
   const actualText = formatForDiff(userInput);
 
   return (
