@@ -246,7 +246,7 @@ function PiDigitsGame() {
 
     tracker.saveResult({
         score: correctCount,
-        totalItems: PI_DIGITS.length,
+        totalItems: PI_DIGITS.slice(0, (chunkIndex + 1)*6).length,
         metadata: { phase: "eval" }
     });
   };
