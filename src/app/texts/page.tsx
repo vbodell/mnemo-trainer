@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import texts from "../../data/texts.json";
 import ReactDiffViewer, { DiffMethod } from "react-diff-viewer-continued";
+import { useGameTracker } from "../../hooks/useGameTracker";
 
 export default function Texts() {
   const [started, setStarted] = useState<boolean>(false);
@@ -22,6 +23,11 @@ export default function Texts() {
   const baseText = texts.find((text) => text.title === textTitle)?.text;
   const cleanBaseText = cleanText(baseText);
   const [inputText, setInputText] = useState<string>("");
+
+  const tracker = useGameTracker({
+    gameSlug: `texts-${textTitle}`,
+    mode: "input_start",
+  });
   
   function updateSelectedTag(tag: string) {
     const titles = texts
@@ -54,8 +60,25 @@ export default function Texts() {
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
     const inputText = formJson["input"].toString();
-    setInputText(cleanText(inputText));
+    const cleanedInput = cleanText(inputText);
+    setInputText(cleanedInput);
     setStarted(true);
+
+    // Calculate Score (Simple word match count)
+    const expectedWords = cleanBaseText.split(" ");
+    const actualWords = cleanedInput.split(" ");
+    let correctCount = 0;
+    expectedWords.forEach((word, idx) => {
+        if (actualWords[idx] && actualWords[idx] === word) {
+            correctCount++;
+        }
+    });
+
+    tracker.saveResult({
+        score: correctCount,
+        totalItems: expectedWords.length,
+        metadata: { textTitle }
+    });
   }
 
   return (
@@ -116,6 +139,7 @@ export default function Texts() {
               name="input"
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder={`${textTitle}...`}
+              onChange={tracker.onInputStart}
             ></textarea>
           </label>
           <button className="btn-primary">Submit</button>

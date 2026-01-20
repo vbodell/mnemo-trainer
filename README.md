@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mnemo Trainer
+
+Mnemo Trainer is a web application designed to help you practice and improve your mnemonic skills. It provides various tools and games to train different aspects of memory, such as memorizing numbers, lists, texts, and decks of cards.
+
+## Features
+
+### 🧠 Numbers
+Practice your Major System or PAO (Person-Action-Object) system.
+- **Modes:** Convert Number -> Person, Person -> Number, Number -> Action, etc.
+- **Timed Mode:** Race against the clock to translate as many items as possible in 60 seconds.
+
+### 📜 Lists
+Memorize and recall pre-defined lists of facts.
+- **Includes:** US Presidents, Swedish Kings, Prime Ministers, Populations, etc.
+- **Evaluation:** Compare your input against the correct list using a diff viewer.
+
+### 📖 Texts
+Practice verbatim memorization of short texts or speeches.
+- **Evaluation:** Word-by-word diff comparison to check your accuracy.
+
+### 🃏 Practice (Deck of Cards)
+A simulator for memorizing a shuffled deck of 52 cards.
+- **Memorize Phase:** Click through the deck one card at a time.
+- **Recall Phase:** Type back the cards in order (e.g., "AH", "2S", "KC").
+- **Evaluation:** Instant feedback on your sequence accuracy.
+
+## Analytics 📊
+
+The application tracks your performance to help you see improvements over time. Game results (duration, score, accuracy) are streamed to **Google BigQuery** for storage and analysis.
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Analytics:** Google BigQuery
+- **Deployment:** Google Cloud Run
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js
+- pnpm
+- A Google Cloud Project (for Analytics)
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd mnemo-trainer
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The app will be available at `http://localhost:3000`.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This application is designed to run on **Google Cloud Run**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1.  Build the container:
+    ```bash
+    docker build -t gcr.io/[PROJECT_ID]/mnemo-trainer .
+    ```
+2.  Push to Container Registry:
+    ```bash
+    docker push gcr.io/[PROJECT_ID]/mnemo-trainer
+    ```
+3.  Deploy to Cloud Run:
+    ```bash
+    gcloud run deploy mnemo-trainer --image gcr.io/[PROJECT_ID]/mnemo-trainer --platform managed
+    ```

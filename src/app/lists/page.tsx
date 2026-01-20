@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-
 import lists from "../../data/lists.json";
 import ReactDiffViewer, { DiffMethod } from "react-diff-viewer-continued";
+import { useGameTracker } from "../../hooks/useGameTracker";
 
 export default function Lists() {
   const [started, setStarted] = useState<boolean>(false);
@@ -17,6 +17,11 @@ export default function Lists() {
 
   const cleanBaseText = mapEntriesToText(listKey, entries);
   const [inputText, setInputText] = useState<string>("");
+
+  const tracker = useGameTracker({
+    gameSlug: `lists-${listKey}`,
+    mode: "input_start",
+  });
 
   function mapEntriesToText(listTitle: string, entries: any[]) {
     const rulers = ["presidents", "primes", "kings"];
@@ -47,9 +52,26 @@ export default function Lists() {
     const form = e.target;
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
-    const inputText = formJson["input"].toString();
-    setInputText(cleanText(inputText));
+    const inputTextRaw = formJson["input"].toString();
+    const cleanedInput = cleanText(inputTextRaw);
+    setInputText(cleanedInput);
     setStarted(true);
+
+    // Calculate Score
+    const expectedLines = cleanBaseText.split('\n');
+    const actualLines = cleanedInput.split('\n');
+    let correctCount = 0;
+    expectedLines.forEach((line, idx) => {
+        if (actualLines[idx] && actualLines[idx] === line) {
+            correctCount++;
+        }
+    });
+
+    tracker.saveResult({
+        score: correctCount,
+        totalItems: expectedLines.length,
+        metadata: { listKey }
+    });
   }
 
   return (
@@ -95,6 +117,7 @@ export default function Lists() {
               name="input"
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder={`${placeholder}...`}
+              onChange={tracker.onInputStart}
             ></textarea>
           </label>
           <button className="btn-primary">Submit</button>

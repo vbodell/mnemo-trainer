@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import QuestionPresenter from "../Presenters/QuestionPresenter";
+import { useGameTracker } from "../../hooks/useGameTracker";
 
 interface GameProps {
   responseChoices: ResponseChoice[];
@@ -20,16 +21,36 @@ export default function GamePresenter({
   const [score, setScore] = useState<number>(0);
   const [gameOver, setGameOver] = useState<boolean>(false);
 
+  const tracker = useGameTracker({
+    gameSlug: "numbers-game", // We might want to make this dynamic later
+    mode: "manual_start",
+  });
+
+  // Start tracker on mount
+  useEffect(() => {
+    tracker.startGame();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     const timeoutId = setTimeout(
-      () => setGameOver(true),
+      () => {
+        setGameOver(true);
+        // Save result when time is up
+        tracker.saveResult({
+            score: score,
+            totalItems: answeredQuestions, // Or just score/answeredQuestions
+            metadata: { reason: "timeout" }
+        });
+      },
       gameDurationInSec * 1000,
     );
     return () => clearTimeout(timeoutId);
-  }, [gameOver, gameDurationInSec]);
+  }, [gameOver, gameDurationInSec, score, answeredQuestions, tracker]);
 
   const shuffledOpts = [...responseChoices].sort(() => Math.random() - 0.5);
   const randomOpts = shuffledOpts.slice(0, 9);
+// ...
 
   const randomIndex = Math.floor(Math.random() * randomOpts.length);
   const question = randomOpts[randomIndex].question;
@@ -38,6 +59,7 @@ export default function GamePresenter({
     setGameOver(false);
     setScore(0);
     setAnsweredQuestions(0);
+    tracker.startGame();
   }
 
   function answerSubmitted(wasCorrect: boolean, clearAnswer: () => void) {
