@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import QuestionPresenter from "../Presenters/QuestionPresenter";
 import { useGameTracker } from "../../hooks/useGameTracker";
@@ -21,6 +21,16 @@ export default function GamePresenter({
   const [score, setScore] = useState<number>(0);
   const [gameOver, setGameOver] = useState<boolean>(false);
 
+  // Use refs to capture current state for the timeout callback
+  const scoreRef = useRef(score);
+  const answeredQuestionsRef = useRef(answeredQuestions);
+
+  // Update refs when state changes
+  useEffect(() => {
+    scoreRef.current = score;
+    answeredQuestionsRef.current = answeredQuestions;
+  }, [score, answeredQuestions]);
+
   const tracker = useGameTracker({
     gameSlug: "numbers-game", // We might want to make this dynamic later
     mode: "manual_start",
@@ -36,17 +46,17 @@ export default function GamePresenter({
     const timeoutId = setTimeout(
       () => {
         setGameOver(true);
-        // Save result when time is up
+        // Save result when time is up - use refs to get current values
         tracker.saveResult({
-            score: score,
-            totalItems: answeredQuestions, // Or just score/answeredQuestions
+            score: scoreRef.current,
+            totalItems: answeredQuestionsRef.current,
             metadata: { reason: "timeout" }
         });
       },
       gameDurationInSec * 1000,
     );
     return () => clearTimeout(timeoutId);
-  }, [gameOver, gameDurationInSec, score, answeredQuestions, tracker]);
+  }, [gameOver, gameDurationInSec, tracker]);
 
   const shuffledOpts = [...responseChoices].sort(() => Math.random() - 0.5);
   const randomOpts = shuffledOpts.slice(0, 9);
