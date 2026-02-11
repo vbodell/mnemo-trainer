@@ -1,14 +1,14 @@
-import { useState } from "react";
-import classNames from "classnames";
+import { useState } from 'react'
+import classNames from 'classnames'
 
-import { ResponseChoice } from "./Game";
-import { ChoiceView } from "../Views/QuestionView";
-import QuestionView from "../Views/QuestionView";
+import { ResponseChoice } from './Game'
+import { ChoiceView } from '../Views/QuestionView'
+import QuestionView from '../Views/QuestionView'
 
 interface QuestionPresenterProps {
-  question: string;
-  choices: ResponseChoice[];
-  answerSubmitted: (arg0: boolean, arg1: () => void) => void;
+  question: string
+  choices: ResponseChoice[]
+  answerSubmitted: (arg0: boolean, arg1: () => void) => void
 }
 
 export default function QuestionPresenter({
@@ -16,18 +16,18 @@ export default function QuestionPresenter({
   choices,
   answerSubmitted,
 }: QuestionPresenterProps) {
-  const [selectedAnswer, setSelectedAnswer] = useState<string>("");
-  const hasAnswered = selectedAnswer !== "";
+  const [selectedAnswer, setSelectedAnswer] = useState<string>('')
+  const hasAnswered = selectedAnswer !== ''
 
   function submitResponse(id: string) {
-    setSelectedAnswer(id);
-    answerSubmitted(isCorrectAnswer(id), () => setSelectedAnswer(""));
+    setSelectedAnswer(id)
+    answerSubmitted(isCorrectAnswer(id), () => setSelectedAnswer(''))
   }
   function isCorrectAnswer(id: string): boolean {
-    return id === question;
+    return id === question
   }
   function isSelectedAnswer(id: string): boolean {
-    return id === selectedAnswer;
+    return id === selectedAnswer
   }
 
   const choiceViews: ChoiceView[] = choices.map(
@@ -37,18 +37,18 @@ export default function QuestionPresenter({
       text: text,
       onClick: () => submitResponse(id),
       className: classNames(
-        "rounded",
-        "p-2",
+        'rounded',
+        'p-2',
         hasAnswered && isCorrectAnswer(id)
-          ? "bg-green-700"
+          ? 'bg-green-700'
           : isSelectedAnswer(id)
-            ? "bg-red-700"
-            : "bg-purple-700",
-        !hasAnswered && "bg-purple-700",
+            ? 'bg-red-700'
+            : 'bg-purple-700',
+        !hasAnswered && 'bg-purple-700'
       ),
-    }),
-  );
-  const choiceLayout = "grid grid-cols-3 grid-rows-3 gap-2";
+    })
+  )
+  const choiceLayout = 'grid grid-cols-3 grid-rows-3 gap-2'
 
   return (
     <QuestionView
@@ -56,5 +56,5 @@ export default function QuestionPresenter({
       choices={choiceViews}
       choiceLayout={choiceLayout}
     />
-  );
+  )
 }

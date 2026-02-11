@@ -1,77 +1,78 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import lists from "../../data/lists.json";
-import ReactDiffViewer, { DiffMethod } from "react-diff-viewer-continued";
-import { useGameTracker } from "../../hooks/useGameTracker";
+import { useState } from 'react'
+import lists from '../../data/lists.json'
+import ReactDiffViewer, { DiffMethod } from 'react-diff-viewer-continued'
+import { useGameTracker } from '../../hooks/useGameTracker'
 
 export default function Lists() {
-  const [started, setStarted] = useState<boolean>(false);
+  const [started, setStarted] = useState<boolean>(false)
 
-  const titles = lists.map(({title}) => title).sort();
-  const [listTitle, setListTitle] = useState<string>(titles[0]);
+  const titles = lists.map(({ title }) => title).sort()
+  const [listTitle, setListTitle] = useState<string>(titles[0])
 
-  const listKey = lists.find((l) => l.title === listTitle)?.key ?? "";
-  const placeholder = lists.find((l) => l.title === listTitle)?.placeholder ?? "";
-  const entries = lists.find((l) => l.title === listTitle)?.entries ?? [];
+  const listKey = lists.find((l) => l.title === listTitle)?.key ?? ''
+  const placeholder =
+    lists.find((l) => l.title === listTitle)?.placeholder ?? ''
+  const entries = lists.find((l) => l.title === listTitle)?.entries ?? []
 
-  const cleanBaseText = mapEntriesToText(listKey, entries);
-  const [inputText, setInputText] = useState<string>("");
+  const cleanBaseText = mapEntriesToText(listKey, entries)
+  const [inputText, setInputText] = useState<string>('')
 
   const tracker = useGameTracker({
     gameSlug: `lists-${listKey}`,
-    mode: "input_start",
-  });
+    mode: 'input_start',
+  })
 
   function mapEntriesToText(listTitle: string, entries: any[]) {
-    const rulers = ["presidents", "primes", "kings"];
-    const isRulerList = rulers.includes(listKey);
-    return isRulerList ? mapRulersToText(entries) : mapCountriesToText(entries);
+    const rulers = ['presidents', 'primes', 'kings']
+    const isRulerList = rulers.includes(listKey)
+    return isRulerList ? mapRulersToText(entries) : mapCountriesToText(entries)
   }
 
   function mapRulersToText(rulers: any[]): string {
-    const rows = rulers.map(e => `${e.name},${e.began_rule}`);
-    return rows.join('\n').toLowerCase();
+    const rows = rulers.map((e) => `${e.name},${e.began_rule}`)
+    return rows.join('\n').toLowerCase()
   }
-  
+
   function mapCountriesToText(countries: any[]): string {
-    const rows = countries.map(e => `${e.country},${e.population}`);
-    return rows.join('\n').toLowerCase();
+    const rows = countries.map((e) => `${e.country},${e.population}`)
+    return rows.join('\n').toLowerCase()
   }
-  
+
   function cleanText(text: string | undefined): string {
-    if (typeof text === "undefined") return "";
-    let cleaned = text.toLowerCase();
-    return cleaned;
+    if (typeof text === 'undefined') return ''
+    const cleaned = text.toLowerCase()
+    return cleaned
   }
 
   function handleSubmit(e: any) {
     // Prevent the browser from reloading the page
-    e.preventDefault();
+    e.preventDefault()
 
-    const form = e.target;
-    const formData = new FormData(form);
-    const formJson = Object.fromEntries(formData.entries());
-    const inputTextRaw = formJson["input"].toString();
-    const cleanedInput = cleanText(inputTextRaw);
-    setInputText(cleanedInput);
-    setStarted(true);
+    const form = e.target
+    const formData = new FormData(form)
+    const formJson = Object.fromEntries(formData.entries())
+    const inputTextRaw = formJson['input'].toString()
+    const cleanedInput = cleanText(inputTextRaw)
+    setInputText(cleanedInput)
+    setStarted(true)
 
     // Calculate Score
-    const expectedLines = cleanBaseText.split('\n');
-    const actualLines = cleanedInput.split('\n');
-    let correctCount = 0;
+    const expectedLines = cleanBaseText.split('\n')
+    const actualLines = cleanedInput.split('\n')
+    let correctCount = 0
     expectedLines.forEach((line, idx) => {
-        if (actualLines[idx] && actualLines[idx] === line) {
-            correctCount++;
-        }
-    });
+      if (actualLines[idx] && actualLines[idx] === line) {
+        correctCount++
+      }
+    })
 
     tracker.saveResult({
-        score: correctCount,
-        totalItems: expectedLines.length,
-        metadata: { listKey }
-    });
+      score: correctCount,
+      totalItems: expectedLines.length,
+      metadata: { listKey },
+    })
   }
 
   return (
@@ -111,7 +112,8 @@ export default function Lists() {
             </select>
           </label>
           <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-            Write the list with values separated by comma and entries by newline.
+            Write the list with values separated by comma and entries by
+            newline.
             <textarea
               rows={8}
               name="input"
@@ -124,5 +126,5 @@ export default function Lists() {
         </form>
       )}
     </main>
-  );
+  )
 }

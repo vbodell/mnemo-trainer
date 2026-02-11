@@ -1,11 +1,11 @@
-"use client";
-import Link from 'next/link';
+'use client'
+import Link from 'next/link'
 
 export default function Practice() {
   const games = [
-    ["Deck of Cards", "/practice/deck-of-cards"],
-    ["Pi Digits", "/practice/pi-digits"],
-  ];
+    ['Deck of Cards', '/practice/deck-of-cards'],
+    ['Pi Digits', '/practice/pi-digits'],
+  ]
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -18,5 +18,5 @@ export default function Practice() {
         ))}
       </div>
     </main>
-  );
+  )
 }

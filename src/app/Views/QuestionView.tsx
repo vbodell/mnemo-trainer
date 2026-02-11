@@ -1,18 +1,22 @@
 export interface ChoiceView {
-  id: string;
-  onClick: () => void;
-  className: string;
-  text: string;
-  disabled: boolean;
+  id: string
+  onClick: () => void
+  className: string
+  text: string
+  disabled: boolean
 }
 
 interface QuestionViewProps {
-  choices: ChoiceView[];
-  question: string;
-  choiceLayout: string;
+  choices: ChoiceView[]
+  question: string
+  choiceLayout: string
 }
 
-export default function QuestionView({ question, choices, choiceLayout }: QuestionViewProps) {
+export default function QuestionView({
+  question,
+  choices,
+  choiceLayout,
+}: QuestionViewProps) {
   return (
     <>
       <div className="text-3xl">{question}</div>
@@ -29,6 +33,5 @@ export default function QuestionView({ question, choices, choiceLayout }: Questi
         ))}
       </div>
     </>
-  );
+  )
 }
-

@@ -1,13 +1,13 @@
-"use client";
+'use client'
 import Link from 'next/link'
 
 export default function Home() {
   const nav = [
-    ["Numbers", "/numbers"],
-    ["Texts", "/texts"],
-    ["Lists", "/lists"],
-    ["Practice", "/practice"],
-  ];
+    ['Numbers', '/numbers'],
+    ['Texts', '/texts'],
+    ['Lists', '/lists'],
+    ['Practice', '/practice'],
+  ]
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Pick a game</h1>
@@ -19,5 +19,5 @@ export default function Home() {
         ))}
       </div>
     </main>
-  );
+  )
 }

@@ -1,84 +1,84 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 
-import texts from "../../data/texts.json";
-import ReactDiffViewer, { DiffMethod } from "react-diff-viewer-continued";
-import { useGameTracker } from "../../hooks/useGameTracker";
+import texts from '../../data/texts.json'
+import ReactDiffViewer, { DiffMethod } from 'react-diff-viewer-continued'
+import { useGameTracker } from '../../hooks/useGameTracker'
 
 export default function Texts() {
-  const [started, setStarted] = useState<boolean>(false);
+  const [started, setStarted] = useState<boolean>(false)
 
-  let tags = texts.map(({ tags }) => tags).flat();
-  tags = Array.from(new Set(tags));
-  tags.unshift("All"); // All categories magic value
-  const [activeTag, setActiveTag] = useState<string>(tags[0]);
+  let tags = texts.map(({ tags }) => tags).flat()
+  tags = Array.from(new Set(tags))
+  tags.unshift('All') // All categories magic value
+  const [activeTag, setActiveTag] = useState<string>(tags[0])
 
   const titles = texts
-    .filter(({ tags }) => activeTag === "All" || tags.includes(activeTag))
+    .filter(({ tags }) => activeTag === 'All' || tags.includes(activeTag))
     .map(({ title }) => title)
-    .sort();
-  const [textTitle, setTextTitle] = useState<string>(titles[0]);
+    .sort()
+  const [textTitle, setTextTitle] = useState<string>(titles[0])
 
-  const baseText = texts.find((text) => text.title === textTitle)?.text;
-  const cleanBaseText = cleanText(baseText);
-  const [inputText, setInputText] = useState<string>("");
+  const baseText = texts.find((text) => text.title === textTitle)?.text
+  const cleanBaseText = cleanText(baseText)
+  const [inputText, setInputText] = useState<string>('')
 
   const tracker = useGameTracker({
     gameSlug: `texts-${textTitle}`,
-    mode: "input_start",
-  });
-  
+    mode: 'input_start',
+  })
+
   function updateSelectedTag(tag: string) {
     const titles = texts
-      .filter(({ tags }) => tag === "All" || tags.includes(tag))
+      .filter(({ tags }) => tag === 'All' || tags.includes(tag))
       .map(({ title }) => title)
-      .sort();
-    setActiveTag(tag);
-    setTextTitle(titles[0]);
+      .sort()
+    setActiveTag(tag)
+    setTextTitle(titles[0])
   }
 
   function cleanText(text: string | undefined): string {
-    if (typeof text === "undefined") return "";
-    const replaceChars = ";:,.?".split("");
-    let cleaned = text.trim().toLowerCase();
+    if (typeof text === 'undefined') return ''
+    const replaceChars = ';:,.?'.split('')
+    let cleaned = text.trim().toLowerCase()
     cleaned = replaceChars.reduce(
-      (replaced, char) => replaced.replaceAll(char, ""),
-      cleaned,
-    );
-    cleaned = cleaned.replaceAll("\n", " ");
-    cleaned = cleaned.replaceAll(" - ", " ");
-    cleaned = cleaned.replaceAll(" — ", " ");
-    return cleaned;
+      (replaced, char) => replaced.replaceAll(char, ''),
+      cleaned
+    )
+    cleaned = cleaned.replaceAll('\n', ' ')
+    cleaned = cleaned.replaceAll(' - ', ' ')
+    cleaned = cleaned.replaceAll(' — ', ' ')
+    return cleaned
   }
 
   function handleSubmit(e: any) {
     // Prevent the browser from reloading the page
-    e.preventDefault();
+    e.preventDefault()
 
-    const form = e.target;
-    const formData = new FormData(form);
-    const formJson = Object.fromEntries(formData.entries());
-    const inputText = formJson["input"].toString();
-    const cleanedInput = cleanText(inputText);
-    setInputText(cleanedInput);
-    setStarted(true);
+    const form = e.target
+    const formData = new FormData(form)
+    const formJson = Object.fromEntries(formData.entries())
+    const inputText = formJson['input'].toString()
+    const cleanedInput = cleanText(inputText)
+    setInputText(cleanedInput)
+    setStarted(true)
 
     // Calculate Score (Simple word match count)
-    const expectedWords = cleanBaseText.split(" ");
-    const actualWords = cleanedInput.split(" ");
-    let correctCount = 0;
+    const expectedWords = cleanBaseText.split(' ')
+    const actualWords = cleanedInput.split(' ')
+    let correctCount = 0
     expectedWords.forEach((word, idx) => {
-        if (actualWords[idx] && actualWords[idx] === word) {
-            correctCount++;
-        }
-    });
+      if (actualWords[idx] && actualWords[idx] === word) {
+        correctCount++
+      }
+    })
 
     tracker.saveResult({
-        score: correctCount,
-        totalItems: expectedWords.length,
-        metadata: { textTitle }
-    });
+      score: correctCount,
+      totalItems: expectedWords.length,
+      metadata: { textTitle },
+    })
   }
 
   return (
@@ -146,5 +146,5 @@ export default function Texts() {
         </form>
       )}
     </main>
-  );
+  )
 }

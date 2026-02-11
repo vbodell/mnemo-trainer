@@ -1,76 +1,76 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 
-import numbers from "../../data/numbers.json";
-import { ResponseChoice } from "../Presenters/Game";
-import GamePresenter from "../Presenters/Game";
+import numbers from '../../data/numbers.json'
+import { ResponseChoice } from '../Presenters/Game'
+import GamePresenter from '../Presenters/Game'
 
 type GameChoice =
-  | "number2person"
-  | "person2number"
-  | "number2action"
-  | "action2number"
-  | "number2thing"
-  | "thing2number";
+  | 'number2person'
+  | 'person2number'
+  | 'number2action'
+  | 'action2number'
+  | 'number2thing'
+  | 'thing2number'
 
 const GAME_CHOICES: Record<GameChoice, string> = {
-  number2person: "Number -> Person",
-  person2number: "Person -> Number",
-  number2action: "Number -> Action",
-  action2number: "Action -> Number",
-  number2thing: "Number -> Thing",
-  thing2number: "Thing -> Number",
-};
+  number2person: 'Number -> Person',
+  person2number: 'Person -> Number',
+  number2action: 'Number -> Action',
+  action2number: 'Action -> Number',
+  number2thing: 'Number -> Thing',
+  thing2number: 'Thing -> Number',
+}
 
 function getResponseChoices(gameChoice: GameChoice): ResponseChoice[] {
   return numbers.map((item) => {
     switch (gameChoice) {
-      case "number2person":
+      case 'number2person':
         return {
           question: item.id,
           answer: item.person,
-        };
-      case "person2number":
+        }
+      case 'person2number':
         return {
           question: item.person,
           answer: item.id,
-        };
-      case "number2action":
+        }
+      case 'number2action':
         return {
           question: item.id,
           answer: item.verb,
-        };
-      case "action2number":
+        }
+      case 'action2number':
         return {
           question: item.verb,
           answer: item.id,
-        };
-      case "number2thing":
+        }
+      case 'number2thing':
         return {
           question: item.id,
           answer: item.thing,
-        };
-      case "thing2number":
+        }
+      case 'thing2number':
         return {
           question: item.thing,
           answer: item.id,
-        };
+        }
       default:
         return {
           question: item.id,
           answer: item.person,
-        };
+        }
     }
-  });
+  })
 }
 
 export default function Numbers() {
-  const [gameChoice, setGameChoice] = useState<GameChoice>("number2person");
-  const responseChoices = getResponseChoices(gameChoice);
+  const [gameChoice, setGameChoice] = useState<GameChoice>('number2person')
+  const responseChoices = getResponseChoices(gameChoice)
 
-  const [started, setStarted] = useState<boolean>(false);
-  const GAME_DURATION = 60;
+  const [started, setStarted] = useState<boolean>(false)
+  const GAME_DURATION = 60
 
   // TODO: For - labels
   return (
@@ -103,5 +103,5 @@ export default function Numbers() {
         </form>
       )}
     </main>
-  );
+  )
 }
